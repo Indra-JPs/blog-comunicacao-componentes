@@ -1,0 +1,22 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="autor">Autor</label>
+      <input [(ngModel)]="post.autor" type="text" id="autor" name="autor" class="form-control" aria-describedby="autorHelp">
+      <small id="autorHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="titulo">Título</label>
+      <input [(ngModel)]="post.titulo" type="text" class="form-control" name="titulo" id="titulo">
+    </div>
+    <div class="form-group">
+      <label for="data">Data de publicação</label>
+      <input [(ngModel)]="post.data" type="text" class="form-control" name="data" id="data">
+    </div>
+    <div class="form-group">
+      <label for="data">Conteúdo</label>
+      <textarea [(ngModel)]="post.conteudo" class="form-control" name="conteudo" id="conteudo" cols="30" rows="5"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
